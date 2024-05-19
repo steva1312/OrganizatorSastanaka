@@ -1,0 +1,42 @@
+.main {
+  grid-template-columns: auto 1fr;
+  @apply grid h-[93vh]
+}
+
+.user-button {
+  transition: all .15s ease-in-out;
+  @apply flex items-center p-2 rounded-md text-white
+}
+
+.user-button:hover {
+  background-color: rgba(255, 255, 255, 0.274);
+}
+
+.profile-title {
+  @apply text-5xl max-sm:text-4xl
+}
+
+/* DASHBOARD */
+.call {
+  border: 1px solid rgb(209 213 219);
+  @apply flex p-10 max-sm:p-5 space-x-10 max-sm:space-x-0 place-content-between items-center rounded-lg
+}
+
+
+/* BUY MORE CALLS */
+.addsub {
+  transition: all .2s ease-in-out;
+}
+
+.addsub:hover {
+  @apply bg-gray-300
+}
+
+
+
+.logout-menu, .scheduling-menu {
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  @apply fixed max-sm:w-[220px] z-50 flex flex-col items-center rounded-md bg-white p-10
+}

@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #152046;
+  --secondary-color: #E7AC74;
+}
+
+.App {
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-gray-800
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-secondary
+}
+
+
+
+
+/* TAILWIND CLASSES */
+
+.step {
+  @apply relative flex flex-col items-center w-40 max-sm:w-[32vw];
+}
+
+.step:not(:last-child)::after {
+  @apply absolute content-[''] bg-gray-300 w-full h-[3px] left-1/2 top-6 -translate-y-1/2 z-0;
+}
+
+.step-number {
+  @apply z-20 bg-gray-300 w-12 h-12 rounded-full flex items-center justify-center text-white text-xl;
+}
+
+.step-active .step-number {
+  @apply bg-secondary
+}
+
+.step-completed .step-number {
+  @apply bg-green-500;
+}
+
+.step-name {
+  @apply mt-1 text-lg max-sm:text-base text-gray-400 font-medium text-center;
+}
+
+.step-completed .step-name, .step-active .step-name{
+  @apply text-black;
+}

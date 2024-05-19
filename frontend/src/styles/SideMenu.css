@@ -1,0 +1,20 @@
+.link {
+  transition: all ease-in-out .2s;
+  @apply  py-5 text-center text-lg;
+}
+
+.link:not(.link-active):hover {
+  background-color: rgb(245, 245, 245)
+}
+
+.link-active {
+  @apply bg-gray-300;
+}
+
+.link-phone {
+  @apply text-white text-center text-lg font-normal py-4
+}
+
+.link-phone-active {
+  @apply bg-teriary text-black
+}
